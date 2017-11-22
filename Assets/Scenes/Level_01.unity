@@ -451,12 +451,12 @@ Prefab:
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 779.5
+      value: 763
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
@@ -466,7 +466,7 @@ Prefab:
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
@@ -516,7 +516,7 @@ Prefab:
     - target: {fileID: 114956636707923710, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseStandardTurret
+      value: SelectStandardTurret
       objectReference: {fileID: 0}
     - target: {fileID: 114956636707923710, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
@@ -8810,6 +8810,7 @@ GameObject:
   - component: {fileID: 1801988418}
   - component: {fileID: 1801988417}
   - component: {fileID: 1801988419}
+  - component: {fileID: 1801988420}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -8861,6 +8862,18 @@ MonoBehaviour:
     type: 2}
   missileLauncherPrefab: {fileID: 1036000143520588, guid: b800c140d2d694a19b2fc4bd18e3fbc2,
     type: 2}
+--- !u!114 &1801988420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1801988416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f72ef9ec7724ba8be244abdbe229f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &1808196919
 Prefab:
   m_ObjectHideFlags: 0
@@ -10442,12 +10455,12 @@ Prefab:
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 864.5
+      value: 848
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
@@ -10457,7 +10470,7 @@ Prefab:
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
@@ -10507,7 +10520,7 @@ Prefab:
     - target: {fileID: 114956636707923710, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 114956636707923710, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
