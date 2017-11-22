@@ -456,7 +456,7 @@ Prefab:
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
@@ -466,7 +466,7 @@ Prefab:
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
@@ -2691,6 +2691,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333b2eebb025e451eb3fadea4ee623e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 1106737721380656, guid: 8e473f872decf4ae9952b5f8ff3d7230, type: 2}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 1036000143520588, guid: b800c140d2d694a19b2fc4bd18e3fbc2, type: 2}
+    cost: 250
 --- !u!1001 &603124317
 Prefab:
   m_ObjectHideFlags: 0
@@ -10441,7 +10447,7 @@ Prefab:
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
@@ -10451,7 +10457,7 @@ Prefab:
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 224314644457596760, guid: 4c7546b9bf8b74ce78f4597edc17832c,
         type: 2}
