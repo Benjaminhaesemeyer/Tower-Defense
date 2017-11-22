@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4880303848476442}
   - component: {fileID: 108471342566564150}
-  - component: {fileID: 95827160427392066}
+  - component: {fileID: 95495108020208850}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619450756541332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.66, z: -41.9}
+  m_LocalPosition: {x: 0.39, y: 4.03, z: -31.720686}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4700581052890272}
@@ -96,14 +96,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795653184537960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.65, z: 10.31}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.35, y: -1.2500002, z: 0.50068665}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4290728309146268}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95827160427392066
+--- !u!95 &95495108020208850
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -112,7 +112,7 @@ Animator:
   m_GameObject: {fileID: 1795653184537960}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24c1fc2ef7856499fb1ca7daf3d5f954, type: 2}
+  m_Controller: {fileID: 9100000, guid: e06da1575440b4d4fb5bc111c7a44071, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -213,7 +213,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1941368489
+  randomSeed: 334437887
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3344,7 +3344,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1549852711
+  randomSeed: 409673883
   InitialModule:
     serializedVersion: 3
     enabled: 1
