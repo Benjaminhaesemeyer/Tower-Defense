@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -21,8 +21,9 @@ public class WaveSpawner : MonoBehaviour {
 			countdown = timeBetweenWaves;
 		}
 		countdown -= Time.deltaTime;
+		countdown = Mathf.Clamp (countdown, 0f, Mathf.Infinity);
 
-		waveCountdownText.text = Mathf.Round(countdown).ToString ();
+		waveCountdownText.text = string.Format ("{0:00.00}", countdown);
 	}
 
 	IEnumerator SpawnWave(){
