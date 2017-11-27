@@ -54,19 +54,42 @@ public class Turret : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (target == null)
+		if (target == null) {
+			if (useLaser) {
+				if (lineRenderer.enabled)
+					lineRenderer.enabled = false;
+			}
 			return;
+		}
+
+		LockOnTarget ();
+
+		if (useLaser) {
+			Laser ();
+		} 
+		else {
+			if(fireCountdown <= 0f) {
+				Shoot ();
+				fireCountdown = 1f / fireRate;
+			}
+			fireCountdown -= Time.deltaTime;
+		}	
+	}
+
+	void Laser() {
+		if (!lineRenderer.enabled)
+			lineRenderer.enabled = true;
+
+		lineRenderer.SetPosition (0, firePoint.position);
+		lineRenderer.SetPosition (1, target.position);
+	}
+
+	void LockOnTarget(){
 		//Target lock on
 		Vector3 dir = target.position - transform.position;
 		Quaternion lookRotation = Quaternion.LookRotation (dir);
 		Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
 		partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
-
-		if(fireCountdown <= 0f) {
-			Shoot ();
-			fireCountdown = 1f / fireRate;
-		}
-		fireCountdown -= Time.deltaTime;
 	}
 
 	void Shoot(){
