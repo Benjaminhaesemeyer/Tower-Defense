@@ -15,6 +15,9 @@ public class Turret : MonoBehaviour {
 
 	[Header("Use Laser")]
 	public bool useLaser = false;
+
+	public int damageOverTime = 30;
+
 	public LineRenderer lineRenderer;
 	public ParticleSystem impactEffect;
 	public Light impactLight;
@@ -82,6 +85,9 @@ public class Turret : MonoBehaviour {
 	}
 
 	void Laser() {
+
+		target.GetComponent<Enemy> ().TakeDamage (damageOverTime * Time.deltaTime);
+
 		if (!lineRenderer.enabled) {
 			lineRenderer.enabled = true;
 			impactEffect.Play ();
