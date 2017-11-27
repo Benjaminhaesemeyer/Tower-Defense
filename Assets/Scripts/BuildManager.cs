@@ -5,15 +5,16 @@ public class BuildManager : MonoBehaviour {
 	public static BuildManager instance;
 
 	void Awake(){
+		if (instance != null) {
+			Debug.LogError ("Moer than one build manager in scene");
+		}
 		instance = this;
 	}
-
-	public GameObject standardTurretPrefab;
-	public GameObject missileLauncherPrefab;
 
 	public GameObject buildEffect;
 
 	private TurretBlueprint turretToBuild;
+
 
 	public bool CanBuild { get{ return turretToBuild != null; }}
 
