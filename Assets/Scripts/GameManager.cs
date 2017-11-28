@@ -15,14 +15,8 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (GameIsOver)
-			return;
-
-        //For testing game over functionality
-        if (Input.GetKeyDown("e"))
-        {
-            EndGame();
-        }
+        if (GameIsOver)
+            return;
 
 		if (PlayerStats.Lives <= 0) {
 
