@@ -10,12 +10,12 @@ public class PlayerStats : MonoBehaviour {
 	public static int Lives;
 	public int startLives = 20;
 
+	public static int Rounds;
 
 	void Start() {
 		Money = startMoney;
-		Debug.Log ("Money at the Start of game: " + PlayerStats.Money);
-
 		Lives = startLives;
+		Rounds = 0;
 
 	}
 }
