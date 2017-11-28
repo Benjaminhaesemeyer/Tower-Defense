@@ -4,6 +4,7 @@ using System.Collections;
 public class Turret : MonoBehaviour {
 
 	private Transform target;
+	private Enemy targetEnemy;
 
 	[Header("General")]
 	public float range = 12f;
@@ -17,6 +18,7 @@ public class Turret : MonoBehaviour {
 	public bool useLaser = false;
 
 	public int damageOverTime = 30;
+	public float slowPct = .5f;
 
 	public LineRenderer lineRenderer;
 	public ParticleSystem impactEffect;
@@ -51,6 +53,7 @@ public class Turret : MonoBehaviour {
 		if (nearestEnemy != null && shortestDistance <= range)
 		{
 			target = nearestEnemy.transform;
+			targetEnemy = nearestEnemy.GetComponent<Enemy> ();
 		}  
 		else{
 			target = null;
@@ -86,7 +89,8 @@ public class Turret : MonoBehaviour {
 
 	void Laser() {
 
-		target.GetComponent<Enemy> ().TakeDamage (damageOverTime * Time.deltaTime);
+		targetEnemy.TakeDamage (damageOverTime * Time.deltaTime);
+		targetEnemy.Slow (slowAmount);
 
 		if (!lineRenderer.enabled) {
 			lineRenderer.enabled = true;
