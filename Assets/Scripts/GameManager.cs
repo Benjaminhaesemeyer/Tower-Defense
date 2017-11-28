@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour {
 		if (GameIsOver)
 			return;
 
+        //For testing game over functionality
+        if (Input.GetKeyDown("e"))
+        {
+            EndGame();
+        }
+
 		if (PlayerStats.Lives <= 0) {
 
 			EndGame ();
