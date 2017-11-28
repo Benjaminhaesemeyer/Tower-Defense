@@ -123,7 +123,7 @@ public class Turret : MonoBehaviour {
 		if (bullet != null)
 			bullet.Seek (target);
 	}
-
+	//Creating a visual for ajusting the range of the turrets.
 	void OnDrawGizmosSelected() {
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere (transform.position, range);
