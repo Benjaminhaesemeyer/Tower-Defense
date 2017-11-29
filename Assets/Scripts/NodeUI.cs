@@ -11,6 +11,8 @@ public class NodeUI : MonoBehaviour {
 
     public Button upgradeButton;
 
+    public Text sellAmount;
+
     private Node target;
 
     public void SetTarget(Node _target) //Find the target Node to display Node UI on top of
@@ -28,7 +30,7 @@ public class NodeUI : MonoBehaviour {
             upgradeCost.text = "DONE";
             upgradeButton.interactable = false;
         }
-
+        sellAmount.text = "$" + target.turretBlueprint.GetSellAmount();
         ui.SetActive(true); //Show the Node UI
     }
 
@@ -42,6 +44,12 @@ public class NodeUI : MonoBehaviour {
     {
         target.UpgradeTurret();
         BuildManager.instance.DeselectNode(); //Close menu after selection made
+    }
+
+    public void Sell () 
+    {
+        target.SellTurret();
+        BuildManager.instance.DeselectNode();
     }
 
 }
