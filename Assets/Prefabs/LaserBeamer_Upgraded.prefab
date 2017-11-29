@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 114629551594317140}
   - component: {fileID: 120389948541697666}
   m_Layer: 0
-  m_Name: LaserBeamer
+  m_Name: LaserBeamer_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,8 +216,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1963653143382554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.62, y: 0.53, z: -3.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.53, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4159093357038932}
   - {fileID: 4117894717954736}
@@ -268,7 +268,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 17e3e18cd802a4b18a4b497d7a8e62d1, type: 2}
   - {fileID: 2100000, guid: 98523ee2f9ac84757a2c20a70f8598e3, type: 2}
-  - {fileID: 2100000, guid: a5cfce4d777244df9ad59ad83584d656, type: 2}
+  - {fileID: 2100000, guid: 4d4970d6dda1f48789c0ddcedeb15d12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -343,9 +343,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.031186577, g: 0.9044118, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.09019608, b: 1, a: 1}
   m_Intensity: 3
-  m_Range: 5
+  m_Range: 7
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -381,12 +381,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1772cbc506aa34af7bac3bd969bb9e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 30
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  damageOverTime: 30
-  slowAmount: 0.5
+  damageOverTime: 40
+  slowAmount: 0.8
   lineRenderer: {fileID: 120389948541697666}
   impactEffect: {fileID: 198256808490976846}
   impactLight: {fileID: 108675598756098690}
@@ -431,7 +431,7 @@ LineRenderer:
   - {x: 0, y: 3, z: 5}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.3
+    widthMultiplier: 0.45
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -446,16 +446,16 @@ LineRenderer:
       m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.6275859, a: 0.27450982}
-      key1: {r: 0, g: 1, b: 0.14081478, a: 0.5882353}
-      key2: {r: 0.025086528, g: 0.884, b: 0.13356414, a: 1}
+      key0: {r: 0, g: 0.66896605, b: 1, a: 0.27450982}
+      key1: {r: 0, g: 0.17368573, b: 0.9847216, a: 0.5882353}
+      key2: {r: 0, g: 0.08965492, b: 1, a: 0.8980392}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 6516
+      ctime1: 15037
       ctime2: 65535
       ctime3: 0
       ctime4: 0
@@ -536,7 +536,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 440991411
+  randomSeed: -77172344
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -688,8 +688,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.35
-      minScalar: 0.25
+      scalar: 0.37
+      minScalar: 0.27
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3662,7 +3662,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 803983727
+  randomSeed: 931062257
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3752,7 +3752,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.153, g: 0.9044118, b: 0, a: 1}
+      maxColor: {r: 0, g: 0.09019608, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3814,8 +3814,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 1.7
+      scalar: 2.3
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6745,7 +6745,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: ee5adc062350b41ad867d5abaa5df86b, type: 2}
+  - {fileID: 2100000, guid: 489fb60bb3f964ce0b623aa7fcda40d7, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
