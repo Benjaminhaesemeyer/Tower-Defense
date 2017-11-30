@@ -12,6 +12,10 @@ public class TurretBlueprint {
     public GameObject upgradedPrefab;
     public int upgradeCost;
 
+    public GameObject SelectedItem;
+    public Sprite SelectedSprite;
+    public Sprite DeselectedSprite;
+
     public int GetSellAmount ()
     {
         return cost / 2;
