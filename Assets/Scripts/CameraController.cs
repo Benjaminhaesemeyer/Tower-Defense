@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+        //Disable player controls once the game is over 
 		if (GameManager.GameIsOver) {
 			this.enabled = false;
 			return;

@@ -6,16 +6,16 @@ public class BuildManager : MonoBehaviour {
 
 	void Awake(){
 		if (instance != null) {
-			Debug.LogError ("Moer than one build manager in scene");
+			Debug.LogError ("More than one build manager in scene");
 		}
 		instance = this;
 	}
 
-	public GameObject buildEffect;
-    public GameObject sellEffect;
+	public GameObject buildEffect; //When turret is built
+    public GameObject sellEffect; //When turret is sold
 
-	private TurretBlueprint turretToBuild;
-    private Node selectedNode;
+	private TurretBlueprint turretToBuild; //Type of turret to build
+    private Node selectedNode; //Node to build on
 
     public NodeUI nodeUI;
 
