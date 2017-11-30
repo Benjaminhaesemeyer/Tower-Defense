@@ -50,6 +50,7 @@ public class NodeUI : MonoBehaviour {
     {
         target.SellTurret();
         BuildManager.instance.DeselectNode();
+        target.isUpgraded = false; //Reset the node, so new turrets can be upgraded
     }
 
 }

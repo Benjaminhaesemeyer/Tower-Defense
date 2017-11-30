@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	public static bool GameIsOver;
+	public static bool GameIsOver; //variable to toggle at end of game 
 
-	public GameObject gameOverUI;
+	public GameObject gameOverUI; //GameOver screen we want to display
 
 	void Start() {
-		GameIsOver = false;
+		GameIsOver = false;  
 	}
 
 	// Update is called once per frame
@@ -17,10 +17,11 @@ public class GameManager : MonoBehaviour {
 
         if (GameIsOver)
             return;
+        
+        //Once we run out of lives end the game
+		if (PlayerStats.Lives <= 0) { 
 
-		if (PlayerStats.Lives <= 0) {
-
-			EndGame ();
+            EndGame (); 
 		}
 	}
 
