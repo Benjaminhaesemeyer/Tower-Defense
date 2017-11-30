@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildManager : MonoBehaviour {
 
@@ -18,6 +19,13 @@ public class BuildManager : MonoBehaviour {
     private Node selectedNode; //Node to build on
 
     public NodeUI nodeUI;
+    public GameObject shopLaserBeamer;
+    public GameObject shopStandardTurret;
+    public GameObject shopMissileLauncher;
+
+    public Sprite defaultLaserBeamerSprite;
+    public Sprite defaultStandardTurret;
+    public Sprite defaultMissileLauncher;
 
 
 	public bool CanBuild { get{ return turretToBuild != null; }}
@@ -34,12 +42,15 @@ public class BuildManager : MonoBehaviour {
         selectedNode = node;
         turretToBuild = null;
         nodeUI.SetTarget(node);
+        shopStandardTurret.GetComponent<Image>().sprite = defaultStandardTurret;
+        shopLaserBeamer.GetComponent<Image>().sprite = defaultLaserBeamerSprite;
+        shopMissileLauncher.GetComponent<Image>().sprite = defaultMissileLauncher;
     } 
 
     public void DeselectNode()
     {
         selectedNode = null;
-        nodeUI.Hide();  
+        nodeUI.Hide();
     }
 
 	public void SelectTurretToBuild(TurretBlueprint turret){

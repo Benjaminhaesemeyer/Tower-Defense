@@ -33,11 +33,11 @@ public class Node : MonoBehaviour {
 
 	void OnMouseDown() {
 
-
 		if (EventSystem.current.IsPointerOverGameObject ())
 			return;
 
 		if (turret != null) {
+            Debug.Log("Can I still place turrets?");
             buildManager.SelectNode(this);
 			return;
 		}

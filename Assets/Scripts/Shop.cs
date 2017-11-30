@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-
     public TurretBlueprint standardTurret;
     public TurretBlueprint missileLauncher;
     public TurretBlueprint laserBeamer;
+
 
     BuildManager buildManager;
 
@@ -20,7 +20,7 @@ public class Shop : MonoBehaviour
         Debug.Log("StandardTurret Selected!");
         buildManager.SelectTurretToBuild(standardTurret);
         standardTurret.SelectedItem.GetComponent<Image>().sprite = standardTurret.SelectedSprite;
-        //Deselect
+        //Deselect other shop items
         missileLauncher.SelectedItem.GetComponent<Image>().sprite = missileLauncher.DeselectedSprite;
         laserBeamer.SelectedItem.GetComponent<Image>().sprite = laserBeamer.DeselectedSprite;
     }
@@ -30,7 +30,7 @@ public class Shop : MonoBehaviour
         Debug.Log("MissileLauncher Selected!");
         buildManager.SelectTurretToBuild(missileLauncher);
         missileLauncher.SelectedItem.GetComponent<Image>().sprite = missileLauncher.SelectedSprite;
-        //Deselect
+        //Deselect other shop items
         standardTurret.SelectedItem.GetComponent<Image>().sprite = standardTurret.DeselectedSprite;
         laserBeamer.SelectedItem.GetComponent<Image>().sprite = laserBeamer.DeselectedSprite;
     }
@@ -40,7 +40,7 @@ public class Shop : MonoBehaviour
         Debug.Log("LaserBeamer Selected!");
         buildManager.SelectTurretToBuild(laserBeamer);
         laserBeamer.SelectedItem.GetComponent<Image>().sprite = laserBeamer.SelectedSprite;
-        //Deselect
+        //Deselect other shop items
         standardTurret.SelectedItem.GetComponent<Image>().sprite = standardTurret.DeselectedSprite;
         missileLauncher.SelectedItem.GetComponent<Image>().sprite = missileLauncher.DeselectedSprite;
     }

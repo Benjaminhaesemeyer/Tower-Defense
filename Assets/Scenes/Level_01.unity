@@ -3734,8 +3734,7 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 1036000143520588, guid: 3ad65ca89f6c040d9ad7e973c7d3661e,
       type: 2}
     upgradeCost: 150
-    SelectedItem: {fileID: 1764338961075450, guid: df9fc21ff6a564e3ab2973d0efba829c,
-      type: 2}
+    SelectedItem: {fileID: 537799555}
     SelectedSprite: {fileID: 21300000, guid: 7208061f43d924c9db1a27758a8b86d1, type: 3}
     DeselectedSprite: {fileID: 21300000, guid: 2640915114a0d4905ae57c9fedbbab62, type: 3}
   laserBeamer:
@@ -11711,6 +11710,15 @@ MonoBehaviour:
     type: 2}
   sellEffect: {fileID: 1913205745132018, guid: 2716a0169beca4602a30e13470f4f0f0, type: 2}
   nodeUI: {fileID: 1422474236}
+  shopLaserBeamer: {fileID: 67999018}
+  shopStandardTurret: {fileID: 2016124215}
+  shopMissileLauncher: {fileID: 537799555}
+  defaultLaserBeamerSprite: {fileID: 21300000, guid: 49c25da919ab14e1c976cccf274475bc,
+    type: 3}
+  defaultStandardTurret: {fileID: 21300000, guid: a26fc46ee6c2f4f469f1d58d2535c341,
+    type: 3}
+  defaultMissileLauncher: {fileID: 21300000, guid: 2640915114a0d4905ae57c9fedbbab62,
+    type: 3}
 --- !u!114 &1801988420
 MonoBehaviour:
   m_ObjectHideFlags: 0
