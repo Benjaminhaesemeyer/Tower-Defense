@@ -43,6 +43,7 @@ public class EnemyMovement : MonoBehaviour {
     //Runs when enemy reaches end of waypoint path
 	void EndPath() {
 		PlayerStats.Lives--; //Subtract life from player
+        WaveSpawner.EnemiesAlive--;
         Destroy (gameObject); //Destroy enemy
 	}
 }

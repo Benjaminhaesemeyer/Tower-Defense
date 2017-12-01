@@ -12409,10 +12409,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8686f31e5a89240608a33a40c6937413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4417921783545370, guid: 13dc6d79ab60045b9bb05fb606619a96,
-    type: 2}
+  waves:
+  - enemy: {fileID: 1315165307545418, guid: 13dc6d79ab60045b9bb05fb606619a96, type: 2}
+    count: 1
+    rate: 2
+  - enemy: {fileID: 1315165307545418, guid: 13dc6d79ab60045b9bb05fb606619a96, type: 2}
+    count: 2
+    rate: 2
+  - enemy: {fileID: 1315165307545418, guid: 13dc6d79ab60045b9bb05fb606619a96, type: 2}
+    count: 5
+    rate: 2
+  - enemy: {fileID: 1315165307545418, guid: 757734608bb3043708c1831c5e6d4f16, type: 2}
+    count: 3
+    rate: 1
+  - enemy: {fileID: 1315165307545418, guid: 8f4f45a0561c94d03851cce9f6ce38c1, type: 2}
+    count: 10
+    rate: 3
   spawnPoint: {fileID: 1074748945}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 3
   waveCountdownText: {fileID: 1433324031}
 --- !u!4 &1801988418
 Transform:
@@ -12488,8 +12502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1819012714}
-  sceneFader: {fileID: 696701969}
   menuSceneName: MainMenu
+  sceneFader: {fileID: 696701969}
 --- !u!1001 &1808196919
 Prefab:
   m_ObjectHideFlags: 0

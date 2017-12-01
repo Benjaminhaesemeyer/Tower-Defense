@@ -2,25 +2,24 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
 
-
-public class SceneFader : MonoBehaviour {
+public class SceneFader : MonoBehaviour
+{
 
     public Image img;
     public AnimationCurve curve;
 
-    void Start() 
+    void Start()
     {
         StartCoroutine(FadeIn());
     }
 
-    public void FadeTo (string scene) 
+    public void FadeTo(string scene)
     {
         StartCoroutine(FadeOut(scene));
     }
 
-    IEnumerator FadeIn () 
+    IEnumerator FadeIn()
     {
         float t = 1f;
 
@@ -44,6 +43,8 @@ public class SceneFader : MonoBehaviour {
             img.color = new Color(0f, 0f, 0f, a);
             yield return 0;
         }
+
         SceneManager.LoadScene(scene);
     }
+
 }
