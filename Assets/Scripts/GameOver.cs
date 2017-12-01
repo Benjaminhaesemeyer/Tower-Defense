@@ -8,16 +8,22 @@ public class GameOver : MonoBehaviour {
 
 	public Text roundsText; //Display how many rounds survived
 
+    public string menuSceneName = "MainMenu";
+
+    public SceneFader sceneFader;
+
 	void OnEnable () {
 		roundsText.text = PlayerStats.Rounds.ToString ();
 	}
     //Rety button will run this and reload the scene 
-	public void Retry () {
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
-		}
+	public void Retry () 
+    {
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+	}
     //Menu button redirects to a menu UI
-	public void Menu () {
-		Debug.Log ("Go to menu!");
+	public void Menu () 
+    {
+        sceneFader.FadeTo(menuSceneName);
 	}
 }
  
