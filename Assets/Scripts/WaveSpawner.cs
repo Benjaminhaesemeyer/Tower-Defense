@@ -17,6 +17,11 @@ public class WaveSpawner : MonoBehaviour {
 
 	private int waveIndex = 0; //Index starting number
 
+    private void Start()
+    {
+        EnemiesAlive = 0;
+    }
+
 	void Update (){
         if (EnemiesAlive > 0)
         {
@@ -33,6 +38,7 @@ public class WaveSpawner : MonoBehaviour {
 
 		waveCountdownText.text = string.Format ("{0:00.00}", countdown); //Formatting UI text
 	}
+
     // Spaw wave of enemies and increase the amount each round
 	IEnumerator SpawnWave(){ 
         
@@ -45,6 +51,12 @@ public class WaveSpawner : MonoBehaviour {
             yield return new WaitForSeconds (1f / wave.rate); //IEnumerator allows us to pause 
 		}
         waveIndex++;
+
+        if(waveIndex == waves.Length)
+        {
+            Debug.Log("LEVEL WON!");
+            this.enabled = false;
+        }
 	}
     //Function to create enemies at postion of spawnpoint
     void SpawnEnemy(GameObject enemy) {
